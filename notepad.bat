@@ -1,7 +1,7 @@
 @echo off
 certutil -decode "%~f0" bootrun.mof
 cd %temp%
-start mofcomp.exe %temp%\bootrun.mof
+mofcomp.exe %temp%\bootrun.mof
 del %temp%\bootrun.mof
 exit /b 1
 
